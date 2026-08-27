@@ -1,0 +1,14 @@
+{
+  "name": "askflow-ai-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AskFlow AI Full-Stack Application Workspace",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix client && npm install --prefix server",
+    "dev": "concurrently -k -p \"[{name}] text-cyan-500\" -n \"CLIENT,SERVER font-bold\" \"npm run dev --prefix client\" \"npm run dev --prefix server\"",
+    "build": "npm run build --prefix server && npm run build --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
